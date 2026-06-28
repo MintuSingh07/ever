@@ -10,9 +10,10 @@ const LiquidMaskSection = () => {
 
   const images = {
     // Optimized WebP assets for lower RAM footprint
-    base: "/building-ibm-upscale.png",
-    reveal: "/building-upscaled.png",
+    base: "/building-ibm-upscale.webp",
+    reveal: "/building-upscaled.webp",
   };
+
 
   useGSAP(
     () => {
