@@ -568,7 +568,7 @@ const App = () => {
       >
         {/* Background Group (Clipped to Hero Height) */}
         <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
-          <div className="absolute inset-0 w-full h-full bg-[url('/bg_mountain.png')] bg-cover bg-bottom origin-bottom scale-[1.15]"></div>
+          <div className="absolute inset-0 w-full h-full bg-[url('/bg_mountain.webp')] bg-cover bg-bottom origin-bottom scale-[1.15]"></div>
           <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]"></div>
           <div className="absolute -bottom-[1px] left-0 w-full h-[30vh] md:h-[40vh] bg-gradient-to-t from-[#050505] to-transparent z-[10]"></div>
         </div>
@@ -587,23 +587,33 @@ const App = () => {
 
         {/* Clouds */}
         <img
-          src="/cloude1.png"
+          src="/cloude1.webp"
           alt="Atmospheric Cloud 1"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
           className="cloud-1 absolute top-20 -left-1/4 w-[60%] h-auto mix-blend-screen opacity-40 z-[8] pointer-events-none"
         />
         <img
-          src="/cloude2.png"
+          src="/cloude2.webp"
           alt="Atmospheric Cloud 2"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
           className="cloud-2 absolute bottom-20 -right-1/4 w-[50%] h-auto mix-blend-screen opacity-30 z-[15] pointer-events-none"
         />
         <img
-          src="/cloude1.png"
+          src="/cloude1.webp"
           alt="Atmospheric Cloud 3"
+          loading="eager"
+          decoding="async"
           className="cloud-3 absolute top-1/2 -right-1/4 w-[45%] h-auto mix-blend-screen opacity-20 z-[7] pointer-events-none -scale-x-100 rotate-12"
         />
         <img
-          src="/cloude2.png"
+          src="/cloude2.webp"
           alt="Atmospheric Cloud 4"
+          loading="eager"
+          decoding="async"
           className="cloud-4 absolute bottom-1/3 -left-1/4 w-[40%] h-auto mix-blend-screen opacity-25 z-[12] pointer-events-none rotate-[-15deg]"
         />
       </section>
@@ -675,8 +685,10 @@ const App = () => {
               <div className="corner-bracket bracket-br" />
               <div className="box-reveal-container w-full bg-black/90 relative border border-white/10">
                 <img
-                  src="/who-we-are.jpeg"
+                  src="/who-we-are.webp"
                   alt="Who We Are"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full aspect-video object-cover opacity-85 select-none pointer-events-none"
                 />
                 <div className="absolute inset-0 border-l border-white/10" />
@@ -726,8 +738,10 @@ Whether it is developing new projects or redeveloping existing properties, we br
               <div className="corner-bracket bracket-br" />
               <div className="box-reveal-container w-full bg-black/90 relative border border-white/10">
                 <img
-                  src="/what-we-do.jpeg"
+                  src="/what-we-do.webp"
                   alt="What We Do"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full aspect-video object-cover opacity-85 select-none pointer-events-none"
                 />
                 <div className="absolute inset-0 border-r border-white/10" />
@@ -744,8 +758,10 @@ Whether it is developing new projects or redeveloping existing properties, we br
               <div className="corner-bracket bracket-br" />
               <div className="box-reveal-container w-full bg-black/90 relative border border-white/10">
                 <img
-                  src="/vision-mission-values.png"
+                  src="/vision-mission-values.webp"
                   alt="Our Vision, Mission & Values"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full aspect-video object-cover opacity-85 select-none pointer-events-none"
                 />
                 <div className="absolute inset-0 border-l border-white/10" />
@@ -812,8 +828,10 @@ Whether it is developing new projects or redeveloping existing properties, we br
               <div className="corner-bracket bracket-br" />
               <div className="box-reveal-container w-full bg-black/90 relative border border-white/10">
                 <img
-                  src="/our-approach.png"
+                  src="/our-approach.webp"
                   alt="Our Approach"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full aspect-video object-cover opacity-85 select-none pointer-events-none"
                 />
                 <div className="absolute inset-0 border-r border-white/10" />
@@ -886,8 +904,11 @@ Whether it is developing new projects or redeveloping existing properties, we br
       {/* Global Building Layer (Above standard sections, below Portfolio overlay) */}
       <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-[150vw] md:w-full flex justify-center items-end px-0 md:px-6 pointer-events-none hero-image-container">
         <img
-          src="/Homepage.png"
+          src="/Homepage.webp"
           alt="Evercrown Homepage Hero"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
           className="hero-image w-full max-w-5xl xl:max-w-6xl drop-shadow-2xl translate-z-0 block opacity-0"
         />
       </div>
