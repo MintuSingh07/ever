@@ -7,6 +7,8 @@ import "lenis/dist/lenis.css";
 import { TbMenu3 } from "react-icons/tb";
 import { AmbientLights } from "./components/AmbientLights";
 import LiquidMaskSection from "./components/LiquidMaskSection";
+import AdvisorySection from "./components/AdvisorySection";
+import ContactSection from "./components/ContactSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -285,8 +287,8 @@ const App = () => {
         gsap.from(".vision-detail-item", {
           scrollTrigger: {
             trigger: "#vision",
-            start: "top 20%",
-            toggleActions: "play none none reverse",
+            start: "top 80%",
+            once: true, // Fire once only — prevents reverse on mobile pinned sections
           },
           x: 50,
           opacity: 0,
@@ -294,6 +296,7 @@ const App = () => {
           stagger: 0.2,
           ease: "power2.out",
         });
+
 
         // Vision Floating Effect
         gsap.to(".vision-detail-item", {
@@ -461,7 +464,7 @@ const App = () => {
           scrollTrigger: {
             trigger: "#build-and-develop",
             start: "top 70%",
-            toggleActions: "play none none reverse",
+            once: true, // Fire once only — prevents reverse hiding text on mobile
           },
           y: 40,
           opacity: 0,
@@ -469,6 +472,7 @@ const App = () => {
           stagger: 0.15,
           ease: "power3.out",
         });
+
       };
 
       // Initialize Lenis
@@ -704,11 +708,9 @@ const App = () => {
                 Who We Are
               </h3>
               <p className="text-stone-300 text-sm tracking-widest uppercase opacity-90">
-                Evercrown Constructions is a new generation startup focused on timely delivery of infrastructure that reflects high-quality, functional design, latest technology and beautiful elevation. <br /> <br />
+                Evercrown Constructions is a new generation startup focused on timely delivery of infrastructure that reflects high-quality, functional design, latest technology and beautiful elevation.<br /> <br />
 
-We operate at the intersection of technical expertise, regulatory compliance, and practical execution. Our team approaches every project with a clear objective: to maximize value while ensuring integrity in our structures, operations and business values. <br /> <br />
-
-Whether it is developing new projects or redeveloping existing properties, we bring a disciplined, detail-oriented approach that prioritizes both efficiency and trust.
+We operate at the intersection of technical expertise, regulatory compliance, and practical execution. Whether it is developing new projects or redeveloping existing properties, we bring a disciplined, detail-oriented approach that prioritizes both efficiency and trust.
               </p>
             </div>
           </div>
@@ -900,6 +902,10 @@ Whether it is developing new projects or redeveloping existing properties, we br
       </section>
 
       <LiquidMaskSection />
+
+      <AdvisorySection />
+
+      <ContactSection />
 
       {/* Global Building Layer (Above standard sections, below Portfolio overlay) */}
       <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-[150vw] md:w-full flex justify-center items-end px-0 md:px-6 pointer-events-none hero-image-container">

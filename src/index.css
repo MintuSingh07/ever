@@ -362,3 +362,30 @@ nav {
   margin-left: 2px;
   opacity: 0.3;
 }
+
+/* Advisory & Contact section utilities */
+.font-cormorant {
+  font-family: var(--font-cormorant);
+}
+
+/* Override autofill background in dark theme */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 0 0px 1000px #050505 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Advisory grid gap line */
+.advisory-grid > * + * {
+  border-left: none;
+}
+
+@media (min-width: 768px) {
+  .advisory-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
