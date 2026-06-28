@@ -4,11 +4,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
-import { TbMenu3 } from "react-icons/tb";
 import { AmbientLights } from "./components/AmbientLights";
 import LiquidMaskSection from "./components/LiquidMaskSection";
 import AdvisorySection from "./components/AdvisorySection";
 import ContactSection from "./components/ContactSection";
+import Navbar from "./components/Navbar";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -549,21 +549,7 @@ const App = () => {
       />
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 w-full z-50">
-        <div className="nav-bg absolute inset-0 bg-transparent opacity-0 pointer-events-none" />
-        <div className="px-5 sm:px-8 py-6 flex justify-between items-center w-full relative z-10">
-          <a
-            href="#"
-            ref={realLogoRef}
-            className="text-[1.2rem] sm:text-2xl font-medium tracking-tighter sm:tracking-tight opacity-0"
-          >
-            EVERCROWN
-          </a>
-          <button className="nav-items text-2xl sm:text-3xl hover:text-neutral-400 transition-colors">
-            <TbMenu3 />
-          </button>
-        </div>
-      </nav>
+      <Navbar ref={realLogoRef} />
 
       {/* Hero Section */}
       <section
